@@ -20,7 +20,7 @@ public class guessnumber {
             System.out.println("3. Hard (5 attempts)");
             System.out.print("Enter your choice (1/2/3): ");
 
-            int attemptsLimit = 7; // Default is Medium
+            int attemptsLimit = 7; 
             if (scanner.hasNextInt()) {
                 int difficulty = scanner.nextInt();
                 switch (difficulty) {
@@ -51,7 +51,7 @@ public class guessnumber {
                 System.out.print("Enter your guess: ");
                 if (!scanner.hasNextInt()) {
                     System.out.println("Invalid input. Please enter a number.");
-                    scanner.next(); // Clear invalid input
+                    scanner.next();
                     continue;
                 }
                 int guess = scanner.nextInt();
@@ -84,7 +84,7 @@ public class guessnumber {
 
             System.out.println("Your current score: " + score);
             System.out.print("Do you want to play another round? (yes/no): ");
-            scanner.nextLine(); // Consume the leftover newline character
+            scanner.nextLine();
             String playAgain = scanner.nextLine().trim().toLowerCase();
             if (!playAgain.equals("yes")) {
                 System.out.println("Thanks for playing! Your final score is: " + score);
